@@ -19,6 +19,8 @@ namespace CharacterBuilder
 
         private decimal[] Stats = { 1, 1, 1, 1, 1, 1 };
         private decimal pointsAvailable = 0;
+        private System.Collections.ArrayList RaceNames=new System.Collections.ArrayList;
+        
 
         private void StrNum_ValueChanged(object sender, EventArgs e)
         {
@@ -59,6 +61,9 @@ namespace CharacterBuilder
         private void NewCharacterMenu_Load(object sender, EventArgs e)
         {
             TotValLabel.Text = "0";
+
+            
+            System.IO.DirectoryInfo di = new System.IO.DirectoryInfo("./Races");
         }
         private void updateTotal()
         {
@@ -81,6 +86,7 @@ namespace CharacterBuilder
             fillStats(0);
             PointAvailLabel.Visible = true;
             RerollButton.Visible = true;
+            FinStatButton.Visible = true;
         }
 
     
@@ -93,6 +99,7 @@ namespace CharacterBuilder
             PointButton.Visible = false;
             PointLabel.Visible = false;
             fillStats(1);
+            FinStatButton.Visible = true;
             PointAvailLabel.Visible = true;
         }
         private void fillStats(int option)
@@ -162,6 +169,11 @@ namespace CharacterBuilder
         private void FinishButton_Click(object sender, EventArgs e)
         {
             Environment.Exit(1);
+        }
+
+        private void RaceBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            TotalLabel.Text = RaceBox.Text;
         }
     }
 }

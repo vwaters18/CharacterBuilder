@@ -61,6 +61,7 @@
             this.FinalInt = new System.Windows.Forms.Label();
             this.FinalWis = new System.Windows.Forms.Label();
             this.FinalCha = new System.Windows.Forms.Label();
+            this.RaceBox = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.StrNum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChaNum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.WisNum)).BeginInit();
@@ -72,7 +73,7 @@
             // 
             // StrNum
             // 
-            this.StrNum.Location = new System.Drawing.Point(115, 32);
+            this.StrNum.Location = new System.Drawing.Point(115, 46);
             this.StrNum.Maximum = new decimal(new int[] {
             20,
             0,
@@ -97,7 +98,7 @@
             // 
             this.StrLabel.AutoSize = true;
             this.StrLabel.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.StrLabel.Location = new System.Drawing.Point(52, 39);
+            this.StrLabel.Location = new System.Drawing.Point(52, 53);
             this.StrLabel.Name = "StrLabel";
             this.StrLabel.Size = new System.Drawing.Size(47, 13);
             this.StrLabel.TabIndex = 1;
@@ -107,7 +108,7 @@
             // 
             this.ChaLabel.AutoSize = true;
             this.ChaLabel.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.ChaLabel.Location = new System.Drawing.Point(49, 164);
+            this.ChaLabel.Location = new System.Drawing.Point(49, 178);
             this.ChaLabel.Name = "ChaLabel";
             this.ChaLabel.Size = new System.Drawing.Size(50, 13);
             this.ChaLabel.TabIndex = 3;
@@ -115,7 +116,7 @@
             // 
             // ChaNum
             // 
-            this.ChaNum.Location = new System.Drawing.Point(115, 162);
+            this.ChaNum.Location = new System.Drawing.Point(115, 176);
             this.ChaNum.Maximum = new decimal(new int[] {
             20,
             0,
@@ -140,7 +141,7 @@
             // 
             this.WisLabel.AutoSize = true;
             this.WisLabel.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.WisLabel.Location = new System.Drawing.Point(54, 142);
+            this.WisLabel.Location = new System.Drawing.Point(54, 156);
             this.WisLabel.Name = "WisLabel";
             this.WisLabel.Size = new System.Drawing.Size(45, 13);
             this.WisLabel.TabIndex = 5;
@@ -148,7 +149,7 @@
             // 
             // WisNum
             // 
-            this.WisNum.Location = new System.Drawing.Point(115, 136);
+            this.WisNum.Location = new System.Drawing.Point(115, 150);
             this.WisNum.Maximum = new decimal(new int[] {
             20,
             0,
@@ -173,7 +174,7 @@
             // 
             this.IntLabel.AutoSize = true;
             this.IntLabel.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.IntLabel.Location = new System.Drawing.Point(36, 117);
+            this.IntLabel.Location = new System.Drawing.Point(36, 131);
             this.IntLabel.Name = "IntLabel";
             this.IntLabel.Size = new System.Drawing.Size(63, 13);
             this.IntLabel.TabIndex = 7;
@@ -181,7 +182,7 @@
             // 
             // IntNum
             // 
-            this.IntNum.Location = new System.Drawing.Point(115, 110);
+            this.IntNum.Location = new System.Drawing.Point(115, 124);
             this.IntNum.Maximum = new decimal(new int[] {
             20,
             0,
@@ -206,7 +207,7 @@
             // 
             this.ConLabel.AutoSize = true;
             this.ConLabel.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.ConLabel.Location = new System.Drawing.Point(37, 90);
+            this.ConLabel.Location = new System.Drawing.Point(37, 104);
             this.ConLabel.Name = "ConLabel";
             this.ConLabel.Size = new System.Drawing.Size(62, 13);
             this.ConLabel.TabIndex = 9;
@@ -214,7 +215,7 @@
             // 
             // ConNum
             // 
-            this.ConNum.Location = new System.Drawing.Point(115, 84);
+            this.ConNum.Location = new System.Drawing.Point(115, 98);
             this.ConNum.Maximum = new decimal(new int[] {
             20,
             0,
@@ -239,7 +240,7 @@
             // 
             this.DexLabel.AutoSize = true;
             this.DexLabel.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.DexLabel.Location = new System.Drawing.Point(51, 63);
+            this.DexLabel.Location = new System.Drawing.Point(51, 77);
             this.DexLabel.Name = "DexLabel";
             this.DexLabel.Size = new System.Drawing.Size(48, 13);
             this.DexLabel.TabIndex = 11;
@@ -247,7 +248,7 @@
             // 
             // DexNum
             // 
-            this.DexNum.Location = new System.Drawing.Point(115, 58);
+            this.DexNum.Location = new System.Drawing.Point(115, 72);
             this.DexNum.Maximum = new decimal(new int[] {
             20,
             0,
@@ -272,7 +273,7 @@
             // 
             this.TotalLabel.AutoSize = true;
             this.TotalLabel.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.TotalLabel.Location = new System.Drawing.Point(75, 192);
+            this.TotalLabel.Location = new System.Drawing.Point(75, 206);
             this.TotalLabel.Name = "TotalLabel";
             this.TotalLabel.Size = new System.Drawing.Size(34, 13);
             this.TotalLabel.TabIndex = 12;
@@ -282,7 +283,7 @@
             // 
             this.TotValLabel.AutoSize = true;
             this.TotValLabel.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.TotValLabel.Location = new System.Drawing.Point(115, 192);
+            this.TotValLabel.Location = new System.Drawing.Point(115, 206);
             this.TotValLabel.Name = "TotValLabel";
             this.TotValLabel.Size = new System.Drawing.Size(27, 13);
             this.TotValLabel.TabIndex = 13;
@@ -291,7 +292,7 @@
             // GenChoiceInfo
             // 
             this.GenChoiceInfo.AutoSize = true;
-            this.GenChoiceInfo.Location = new System.Drawing.Point(264, 32);
+            this.GenChoiceInfo.Location = new System.Drawing.Point(264, 46);
             this.GenChoiceInfo.Name = "GenChoiceInfo";
             this.GenChoiceInfo.Size = new System.Drawing.Size(169, 13);
             this.GenChoiceInfo.TabIndex = 14;
@@ -299,7 +300,7 @@
             // 
             // RollButton
             // 
-            this.RollButton.Location = new System.Drawing.Point(267, 58);
+            this.RollButton.Location = new System.Drawing.Point(267, 72);
             this.RollButton.Name = "RollButton";
             this.RollButton.Size = new System.Drawing.Size(75, 23);
             this.RollButton.TabIndex = 15;
@@ -310,7 +311,7 @@
             // RollLabel
             // 
             this.RollLabel.AutoSize = true;
-            this.RollLabel.Location = new System.Drawing.Point(349, 58);
+            this.RollLabel.Location = new System.Drawing.Point(349, 72);
             this.RollLabel.Name = "RollLabel";
             this.RollLabel.Size = new System.Drawing.Size(156, 13);
             this.RollLabel.TabIndex = 16;
@@ -319,7 +320,7 @@
             // PointLabel
             // 
             this.PointLabel.AutoSize = true;
-            this.PointLabel.Location = new System.Drawing.Point(349, 90);
+            this.PointLabel.Location = new System.Drawing.Point(349, 104);
             this.PointLabel.Name = "PointLabel";
             this.PointLabel.Size = new System.Drawing.Size(131, 13);
             this.PointLabel.TabIndex = 18;
@@ -327,7 +328,7 @@
             // 
             // PointButton
             // 
-            this.PointButton.Location = new System.Drawing.Point(267, 90);
+            this.PointButton.Location = new System.Drawing.Point(267, 104);
             this.PointButton.Name = "PointButton";
             this.PointButton.Size = new System.Drawing.Size(75, 23);
             this.PointButton.TabIndex = 17;
@@ -338,7 +339,7 @@
             // PointAvailLabel
             // 
             this.PointAvailLabel.AutoSize = true;
-            this.PointAvailLabel.Location = new System.Drawing.Point(267, 120);
+            this.PointAvailLabel.Location = new System.Drawing.Point(267, 134);
             this.PointAvailLabel.Name = "PointAvailLabel";
             this.PointAvailLabel.Size = new System.Drawing.Size(87, 13);
             this.PointAvailLabel.TabIndex = 20;
@@ -347,7 +348,7 @@
             // 
             // RerollButton
             // 
-            this.RerollButton.Location = new System.Drawing.Point(267, 142);
+            this.RerollButton.Location = new System.Drawing.Point(267, 156);
             this.RerollButton.Name = "RerollButton";
             this.RerollButton.Size = new System.Drawing.Size(75, 23);
             this.RerollButton.TabIndex = 21;
@@ -381,7 +382,7 @@
             this.panel1.Controls.Add(this.FinalCon);
             this.panel1.Controls.Add(this.FinalDex);
             this.panel1.Controls.Add(this.FinalStr);
-            this.panel1.Location = new System.Drawing.Point(35, 28);
+            this.panel1.Location = new System.Drawing.Point(35, 42);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(212, 186);
             this.panel1.TabIndex = 24;
@@ -399,20 +400,21 @@
             // RaceLabel
             // 
             this.RaceLabel.AutoSize = true;
-            this.RaceLabel.Location = new System.Drawing.Point(15, 234);
+            this.RaceLabel.Location = new System.Drawing.Point(15, 248);
             this.RaceLabel.Name = "RaceLabel";
-            this.RaceLabel.Size = new System.Drawing.Size(35, 13);
+            this.RaceLabel.Size = new System.Drawing.Size(79, 13);
             this.RaceLabel.TabIndex = 26;
-            this.RaceLabel.Text = "label1";
+            this.RaceLabel.Text = "Choose a race:";
             // 
             // FinStatButton
             // 
-            this.FinStatButton.Location = new System.Drawing.Point(267, 172);
+            this.FinStatButton.Location = new System.Drawing.Point(267, 186);
             this.FinStatButton.Name = "FinStatButton";
             this.FinStatButton.Size = new System.Drawing.Size(75, 23);
             this.FinStatButton.TabIndex = 27;
             this.FinStatButton.Text = "Finish Stats";
             this.FinStatButton.UseVisualStyleBackColor = true;
+            this.FinStatButton.Visible = false;
             this.FinStatButton.Click += new System.EventHandler(this.FinStatButton_Click);
             // 
             // FinalStr
@@ -475,12 +477,25 @@
             this.FinalCha.Text = "FinalCha";
             this.FinalCha.Visible = false;
             // 
+            // RaceBox
+            // 
+            this.RaceBox.FormattingEnabled = true;
+            
+            this.RaceBox.Items.AddRange(new string[] { "null" });
+            
+            this.RaceBox.Location = new System.Drawing.Point(101, 248);
+            this.RaceBox.Name = "RaceBox";
+            this.RaceBox.Size = new System.Drawing.Size(120, 56);
+            this.RaceBox.TabIndex = 28;
+            this.RaceBox.SelectedIndexChanged += new System.EventHandler(this.RaceBox_SelectedIndexChanged);
+            // 
             // NewCharacterMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.RaceBox);
             this.Controls.Add(this.FinStatButton);
             this.Controls.Add(this.RaceLabel);
             this.Controls.Add(this.FinishButton);
@@ -559,5 +574,6 @@
         private System.Windows.Forms.Label FinalCon;
         private System.Windows.Forms.Label FinalDex;
         private System.Windows.Forms.Label FinalStr;
+        private System.Windows.Forms.ListBox RaceBox;
     }
 }

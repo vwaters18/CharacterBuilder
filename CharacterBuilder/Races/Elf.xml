@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Race>
+  <name>Elf</name>
+  <features>
+   <stats>
+     <stat>
+       <name>Dex</name>
+       <bonus>2</bonus>
+      </stat>
+     <stat>
+       <name>Int</name>
+       <bonus>1</bonus>
+     </stat>
+   </stats>
+   <feature>
+     <name>Darkvision</name>
+     <desc>
+       You can see up to 60 ft in dim light as if it were bright, and darkness as if it were dim.
+     </desc>
+   </feature>
+    <feature>
+     <name>Fey Ancestry</name>
+     <desc>
+       You have advantage on Saving Throws against being Charmed, and magic can’t put you to sleep.
+     </desc>
+    </feature>
+  </features>
+</Race>
