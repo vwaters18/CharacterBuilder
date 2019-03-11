@@ -1,43 +1,50 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Races>
-  <Race name="Human">
+  <Race>
+    <name>Human</name>
     <features>
       <stats>
-        <stat name="Str" bonus="1"></stat>
-        <stat name="Dex" bonus="1"></stat>
-        <stat name="Con" bonus="1"></stat>
-        <stat name="Int" bonus="1"></stat>
-        <stat name="Wis" bonus="1"></stat>
-        <stat nane="Cha" bonus="1"></stat>
+        <stat><StatName>Str</StatName><bonus>1</bonus></stat>
+        <stat><StatName>Dex</StatName><bonus>1</bonus></stat>
+        <stat><StatName>Con</StatName><bonus>1</bonus></stat>
+        <stat><StatName>Int</StatName><bonus>1</bonus></stat>
+        <stat><StatName>Wis</StatName><bonus>1</bonus></stat>
+        <stat><StatName>Cha</StatName><bonus>1</bonus></stat>
       </stats>
     </features>
   </Race>
-  <Race name="Elf">
+  <Race>
+    <name>Elf</name>
     <features>
       <stats>
-        <stat name="Dex" bonus="2"></stat>
-        <stat name="Int" bonus="1"></stat>
+        <stat><StatName>Dex</StatName><bonus>2</bonus></stat>
+        <stat><StatName>Int</StatName><bonus>1</bonus></stat>
       </stats>
 
-      <feature name="Darkvision">
+      <feature>
+        <featureName>Darkvision</featureName>
         <desc>You can see up to 60 ft in dim light as if it were bright, and darkness as if it were dim.</desc>
       </feature>
 
-      <feature name="Fey Ancenstry">
+      <feature>
+        <featureName>Fey Ancestry</featureName>
         <desc>You have advantage on Saving Throws against being Charmed, and magic can’t put you to sleep.</desc>
       </feature>
     </features>
   </Race>
-  <Race name="Dwarf">
+  <Race>
+    <name>Dwarf</name>
     <features>
       <stats>
-        <stat name="Con" bonus="2"></stat>
-        <stat name="Str" bonus="2"></stat>
+        <stat><StatName>Con</StatName><bonus>2</bonus></stat>
+        <stat><StatName>Str</StatName><bonus>1</bonus></stat>
       </stats>
-      <feature name="Darkvision">
+      <feature>
+        <featureName>Darkvision</featureName>
         <desc>You can see up to 60 ft in dim light as if it were bright, and darkness as if it were dim.</desc>
       </feature>
-      <feature name="Dwarven Resilience">
+      <feature>
+        <featureName>Dwarven Resilience</featureName>
         <desc>You have advantage on Saving Throws against poison, and you have Resistance against poison damage.</desc>
       </feature>
     </features>

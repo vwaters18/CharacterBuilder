@@ -21,7 +21,10 @@ namespace CharacterBuilder
         private decimal[] Stats = { 1, 1, 1, 1, 1, 1 };
         private decimal pointsAvailable = 0;
         private System.Collections.ArrayList RaceNames=new System.Collections.ArrayList();
-        
+        private XmlDocument RaceDocument;
+        private XmlNode RaceRoot;
+        private XmlNodeList Races;
+        private XmlNode selectedRace;
 
         private void StrNum_ValueChanged(object sender, EventArgs e)
         {
@@ -59,26 +62,27 @@ namespace CharacterBuilder
             Stats[5] = ChaNum.Value;
             updateTotal();
         }
+
         private void NewCharacterMenu_Load(object sender, EventArgs e)
         {
             TotValLabel.Text = "0";
 
-            XmlDocument Races = new XmlDocument();
-            Races.Load("C:/Users/vwaters/Desktop/Visual_studio_stuff/Character Builder Git/CharacterBuilder/Races.xml");
-            MessageBox.Show(Races.);
+            RaceDocument = new XmlDocument();
+            RaceDocument.Load("C:/Users/vwaters/Desktop/Visual_studio_stuff/Character Builder Git/CharacterBuilder/Races.xml");
 
-            /*
-            var Races = new System.IO.DirectoryInfo("D:/Coding/vwaters18/CharacterBuilder/CharacterBuilder/Races").EnumerateFiles();
-            foreach (var file in Races)
-            { 
-                RaceNames.Add(file.Name.TrimEnd('.','x','m','l'));
-            }
-            RaceBox.Items.Remove("null");
-            foreach(string race in RaceNames)
+            RaceRoot = RaceDocument.SelectSingleNode("Races");
+            Races = RaceRoot.SelectNodes("Race");
+
+            RaceBox.Items.Clear();
+
+            foreach (XmlNode Race in Races)
             {
-                RaceBox.Items.Add(race);
+                RaceNames.Add(Race.SelectSingleNode("name").InnerText);
+                RaceBox.Items.Add(Race.SelectSingleNode("name").InnerText);
             }
-            */
+
+            
+            
         }
         private void updateTotal()
         {
@@ -187,9 +191,9 @@ namespace CharacterBuilder
 
         private void RaceBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            XmlReader reader = System.Xml.XmlReader.Create("D:/Coding/vwaters18/CharacterBuilder/CharacterBuilder/Races/" + RaceBox.SelectedItem + ".xml");
-            reader.ReadToFollowing("stat");
-            NameLabel.Text = reader.ReadElementContentAsString();
+           MessageBox.Show(RaceBox.SelectedItem.ToString());
+           selectedRace = RaceRoot.SelectSingleNode("Race[name = \""+ RaceBox.SelectedItem.ToString() + "\"]");
+           MessageBox.Show(selectedRace.InnerText);
 
         }
     }
