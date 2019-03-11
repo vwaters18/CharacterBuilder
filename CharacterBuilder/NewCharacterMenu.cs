@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace CharacterBuilder
 {
@@ -63,7 +64,18 @@ namespace CharacterBuilder
             TotValLabel.Text = "0";
 
             
-            System.IO.DirectoryInfo di = new System.IO.DirectoryInfo("./Races");
+            
+            var Races = new System.IO.DirectoryInfo("D:/Coding/vwaters18/CharacterBuilder/CharacterBuilder/Races").EnumerateFiles();
+            foreach (var file in Races)
+            { 
+                RaceNames.Add(file.Name.TrimEnd('.','x','m','l'));
+            }
+            RaceBox.Items.Remove("null");
+            foreach(string race in RaceNames)
+            {
+                RaceBox.Items.Add(race);
+            }
+            
         }
         private void updateTotal()
         {
@@ -89,7 +101,6 @@ namespace CharacterBuilder
             FinStatButton.Visible = true;
         }
 
-    
 
         private void PointButton_Click_1(object sender, EventArgs e)
         {
@@ -173,7 +184,10 @@ namespace CharacterBuilder
 
         private void RaceBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            TotalLabel.Text = RaceBox.Text;
+            XmlReader reader = System.Xml.XmlReader.Create("D:/Coding/vwaters18/CharacterBuilder/CharacterBuilder/Races/" + RaceBox.SelectedItem + ".xml");
+            reader.ReadToFollowing("stat");
+            NameLabel.Text = reader.ReadElementContentAsString();
+
         }
     }
 }

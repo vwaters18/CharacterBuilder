@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Race name="Human">
+  <features>
+    <stats>
+      <stat name="Str" bonus="1"></stat>
+      <stat name="Dex" bonus="1"></stat>
+      <stat name="Con" bonus="1"></stat>
+      <stat name="Int" bonus="1"></stat>
+      <stat name="Wis" bonus="1"></stat>
+      <stat nane="Cha" bonus="1"></stat>
+    </stats>
+  </features>
+</Race>

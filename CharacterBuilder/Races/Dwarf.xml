@@ -3,23 +3,15 @@
   <name>Dwarf</name>
   <features>
     <stats>
-      <stat>
-        <name>Con</name>
-        <bonus>2</bonus>
-      </stat>
-      <stat>
-        <name>Str</name>
-        <bonus>1</bonus>
-      </stat>
+      <stat name="Con" bonus="2"></stat>
+      <stat name="Str" bonus="2"></stat>
     </stats>
-    <feature>
-      <name>Darkvision</name>
+    <feature name="Darkvision">
       <desc>
         You can see up to 60 ft in dim light as if it were bright, and darkness as if it were dim.
       </desc>
     </feature>
-    <feature>
-      <name>Dwarven Resilience</name>
+    <feature name="Dwarven Resilience">
       <desc>
         You have advantage on Saving Throws against poison, and you have Resistance against poison damage.
       </desc>
