@@ -63,8 +63,11 @@ namespace CharacterBuilder
         {
             TotValLabel.Text = "0";
 
-            
-            
+            XmlDocument Races = new XmlDocument();
+            Races.Load("C:/Users/vwaters/Desktop/Visual_studio_stuff/Character Builder Git/CharacterBuilder/Races.xml");
+            MessageBox.Show(Races.);
+
+            /*
             var Races = new System.IO.DirectoryInfo("D:/Coding/vwaters18/CharacterBuilder/CharacterBuilder/Races").EnumerateFiles();
             foreach (var file in Races)
             { 
@@ -75,7 +78,7 @@ namespace CharacterBuilder
             {
                 RaceBox.Items.Add(race);
             }
-            
+            */
         }
         private void updateTotal()
         {
