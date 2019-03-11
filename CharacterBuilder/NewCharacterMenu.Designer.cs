@@ -53,12 +53,21 @@
             this.NameBox = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.FinishButton = new System.Windows.Forms.Button();
+            this.RaceLabel = new System.Windows.Forms.Label();
+            this.FinStatButton = new System.Windows.Forms.Button();
+            this.FinalStr = new System.Windows.Forms.Label();
+            this.FinalDex = new System.Windows.Forms.Label();
+            this.FinalCon = new System.Windows.Forms.Label();
+            this.FinalInt = new System.Windows.Forms.Label();
+            this.FinalWis = new System.Windows.Forms.Label();
+            this.FinalCha = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.StrNum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChaNum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.WisNum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IntNum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConNum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DexNum)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // StrNum
@@ -75,7 +84,7 @@
             0,
             0});
             this.StrNum.Name = "StrNum";
-            this.StrNum.Size = new System.Drawing.Size(120, 20);
+            this.StrNum.Size = new System.Drawing.Size(35, 20);
             this.StrNum.TabIndex = 0;
             this.StrNum.Value = new decimal(new int[] {
             1,
@@ -118,7 +127,7 @@
             0,
             0});
             this.ChaNum.Name = "ChaNum";
-            this.ChaNum.Size = new System.Drawing.Size(120, 20);
+            this.ChaNum.Size = new System.Drawing.Size(35, 20);
             this.ChaNum.TabIndex = 2;
             this.ChaNum.Value = new decimal(new int[] {
             1,
@@ -151,7 +160,7 @@
             0,
             0});
             this.WisNum.Name = "WisNum";
-            this.WisNum.Size = new System.Drawing.Size(120, 20);
+            this.WisNum.Size = new System.Drawing.Size(35, 20);
             this.WisNum.TabIndex = 4;
             this.WisNum.Value = new decimal(new int[] {
             1,
@@ -184,7 +193,7 @@
             0,
             0});
             this.IntNum.Name = "IntNum";
-            this.IntNum.Size = new System.Drawing.Size(120, 20);
+            this.IntNum.Size = new System.Drawing.Size(35, 20);
             this.IntNum.TabIndex = 6;
             this.IntNum.Value = new decimal(new int[] {
             1,
@@ -217,7 +226,7 @@
             0,
             0});
             this.ConNum.Name = "ConNum";
-            this.ConNum.Size = new System.Drawing.Size(120, 20);
+            this.ConNum.Size = new System.Drawing.Size(35, 20);
             this.ConNum.TabIndex = 8;
             this.ConNum.Value = new decimal(new int[] {
             1,
@@ -250,7 +259,7 @@
             0,
             0});
             this.DexNum.Name = "DexNum";
-            this.DexNum.Size = new System.Drawing.Size(120, 20);
+            this.DexNum.Size = new System.Drawing.Size(35, 20);
             this.DexNum.TabIndex = 10;
             this.DexNum.Value = new decimal(new int[] {
             1,
@@ -275,9 +284,9 @@
             this.TotValLabel.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.TotValLabel.Location = new System.Drawing.Point(115, 192);
             this.TotValLabel.Name = "TotValLabel";
-            this.TotValLabel.Size = new System.Drawing.Size(35, 13);
+            this.TotValLabel.Size = new System.Drawing.Size(27, 13);
             this.TotValLabel.TabIndex = 13;
-            this.TotValLabel.Text = "label1";
+            this.TotValLabel.Text = "num";
             // 
             // GenChoiceInfo
             // 
@@ -366,6 +375,12 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panel1.Controls.Add(this.FinalCha);
+            this.panel1.Controls.Add(this.FinalWis);
+            this.panel1.Controls.Add(this.FinalInt);
+            this.panel1.Controls.Add(this.FinalCon);
+            this.panel1.Controls.Add(this.FinalDex);
+            this.panel1.Controls.Add(this.FinalStr);
             this.panel1.Location = new System.Drawing.Point(35, 28);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(212, 186);
@@ -379,6 +394,86 @@
             this.FinishButton.TabIndex = 25;
             this.FinishButton.Text = "Finish";
             this.FinishButton.UseVisualStyleBackColor = true;
+            this.FinishButton.Click += new System.EventHandler(this.FinishButton_Click);
+            // 
+            // RaceLabel
+            // 
+            this.RaceLabel.AutoSize = true;
+            this.RaceLabel.Location = new System.Drawing.Point(15, 234);
+            this.RaceLabel.Name = "RaceLabel";
+            this.RaceLabel.Size = new System.Drawing.Size(35, 13);
+            this.RaceLabel.TabIndex = 26;
+            this.RaceLabel.Text = "label1";
+            // 
+            // FinStatButton
+            // 
+            this.FinStatButton.Location = new System.Drawing.Point(267, 172);
+            this.FinStatButton.Name = "FinStatButton";
+            this.FinStatButton.Size = new System.Drawing.Size(75, 23);
+            this.FinStatButton.TabIndex = 27;
+            this.FinStatButton.Text = "Finish Stats";
+            this.FinStatButton.UseVisualStyleBackColor = true;
+            this.FinStatButton.Click += new System.EventHandler(this.FinStatButton_Click);
+            // 
+            // FinalStr
+            // 
+            this.FinalStr.AutoSize = true;
+            this.FinalStr.Location = new System.Drawing.Point(121, 11);
+            this.FinalStr.Name = "FinalStr";
+            this.FinalStr.Size = new System.Drawing.Size(42, 13);
+            this.FinalStr.TabIndex = 28;
+            this.FinalStr.Text = "FinalStr";
+            this.FinalStr.Visible = false;
+            // 
+            // FinalDex
+            // 
+            this.FinalDex.AutoSize = true;
+            this.FinalDex.Location = new System.Drawing.Point(121, 35);
+            this.FinalDex.Name = "FinalDex";
+            this.FinalDex.Size = new System.Drawing.Size(48, 13);
+            this.FinalDex.TabIndex = 29;
+            this.FinalDex.Text = "FinalDex";
+            this.FinalDex.Visible = false;
+            // 
+            // FinalCon
+            // 
+            this.FinalCon.AutoSize = true;
+            this.FinalCon.Location = new System.Drawing.Point(121, 62);
+            this.FinalCon.Name = "FinalCon";
+            this.FinalCon.Size = new System.Drawing.Size(48, 13);
+            this.FinalCon.TabIndex = 30;
+            this.FinalCon.Text = "FinalCon";
+            this.FinalCon.Visible = false;
+            // 
+            // FinalInt
+            // 
+            this.FinalInt.AutoSize = true;
+            this.FinalInt.Location = new System.Drawing.Point(121, 89);
+            this.FinalInt.Name = "FinalInt";
+            this.FinalInt.Size = new System.Drawing.Size(41, 13);
+            this.FinalInt.TabIndex = 31;
+            this.FinalInt.Text = "FinalInt";
+            this.FinalInt.Visible = false;
+            // 
+            // FinalWis
+            // 
+            this.FinalWis.AutoSize = true;
+            this.FinalWis.Location = new System.Drawing.Point(121, 114);
+            this.FinalWis.Name = "FinalWis";
+            this.FinalWis.Size = new System.Drawing.Size(47, 13);
+            this.FinalWis.TabIndex = 32;
+            this.FinalWis.Text = "FinalWis";
+            this.FinalWis.Visible = false;
+            // 
+            // FinalCha
+            // 
+            this.FinalCha.AutoSize = true;
+            this.FinalCha.Location = new System.Drawing.Point(121, 141);
+            this.FinalCha.Name = "FinalCha";
+            this.FinalCha.Size = new System.Drawing.Size(48, 13);
+            this.FinalCha.TabIndex = 33;
+            this.FinalCha.Text = "FinalCha";
+            this.FinalCha.Visible = false;
             // 
             // NewCharacterMenu
             // 
@@ -386,6 +481,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.FinStatButton);
+            this.Controls.Add(this.RaceLabel);
             this.Controls.Add(this.FinishButton);
             this.Controls.Add(this.NameBox);
             this.Controls.Add(this.NameLabel);
@@ -420,6 +517,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.IntNum)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConNum)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DexNum)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -452,5 +551,13 @@
         private System.Windows.Forms.TextBox NameBox;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button FinishButton;
+        private System.Windows.Forms.Label RaceLabel;
+        private System.Windows.Forms.Button FinStatButton;
+        private System.Windows.Forms.Label FinalCha;
+        private System.Windows.Forms.Label FinalWis;
+        private System.Windows.Forms.Label FinalInt;
+        private System.Windows.Forms.Label FinalCon;
+        private System.Windows.Forms.Label FinalDex;
+        private System.Windows.Forms.Label FinalStr;
     }
 }

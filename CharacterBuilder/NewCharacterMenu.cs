@@ -136,5 +136,32 @@ namespace CharacterBuilder
         {
             fillStats(0);
         }
+
+        private void FinStatButton_Click(object sender, EventArgs e)
+        {
+            FinalStr.Text = Stats[0].ToString();
+            FinalDex.Text = Stats[1].ToString();
+            FinalCon.Text = Stats[2].ToString();
+            FinalInt.Text = Stats[3].ToString();
+            FinalWis.Text = Stats[4].ToString();
+            FinalCha.Text = Stats[5].ToString();
+            FinalStr.Visible = true;
+            FinalDex.Visible = true;
+            FinalCon.Visible = true;
+            FinalInt.Visible = true;
+            FinalWis.Visible = true;
+            FinalCha.Visible = true;
+            StrNum.Visible = false;
+            DexNum.Visible = false;
+            ConNum.Visible = false;
+            IntNum.Visible = false;
+            WisNum.Visible = false;
+            ChaNum.Visible = false;
+        }
+
+        private void FinishButton_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(1);
+        }
     }
 }
