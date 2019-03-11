@@ -19,7 +19,7 @@ namespace CharacterBuilder
 
         private decimal[] Stats = { 1, 1, 1, 1, 1, 1 };
         private decimal pointsAvailable = 0;
-        private System.Collections.ArrayList RaceNames=new System.Collections.ArrayList;
+        private System.Collections.ArrayList RaceNames=new System.Collections.ArrayList();
         
 
         private void StrNum_ValueChanged(object sender, EventArgs e)
