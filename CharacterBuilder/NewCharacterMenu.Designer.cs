@@ -52,15 +52,15 @@
             this.NameLabel = new System.Windows.Forms.Label();
             this.NameBox = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.FinalCha = new System.Windows.Forms.Label();
+            this.FinalWis = new System.Windows.Forms.Label();
+            this.FinalInt = new System.Windows.Forms.Label();
+            this.FinalCon = new System.Windows.Forms.Label();
+            this.FinalDex = new System.Windows.Forms.Label();
+            this.FinalStr = new System.Windows.Forms.Label();
             this.FinishButton = new System.Windows.Forms.Button();
             this.RaceLabel = new System.Windows.Forms.Label();
             this.FinStatButton = new System.Windows.Forms.Button();
-            this.FinalStr = new System.Windows.Forms.Label();
-            this.FinalDex = new System.Windows.Forms.Label();
-            this.FinalCon = new System.Windows.Forms.Label();
-            this.FinalInt = new System.Windows.Forms.Label();
-            this.FinalWis = new System.Windows.Forms.Label();
-            this.FinalCha = new System.Windows.Forms.Label();
             this.RaceBox = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.StrNum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChaNum)).BeginInit();
@@ -387,9 +387,70 @@
             this.panel1.Size = new System.Drawing.Size(212, 186);
             this.panel1.TabIndex = 24;
             // 
+            // FinalCha
+            // 
+            this.FinalCha.AutoSize = true;
+            this.FinalCha.Location = new System.Drawing.Point(121, 141);
+            this.FinalCha.Name = "FinalCha";
+            this.FinalCha.Size = new System.Drawing.Size(48, 13);
+            this.FinalCha.TabIndex = 33;
+            this.FinalCha.Text = "FinalCha";
+            this.FinalCha.Visible = false;
+            // 
+            // FinalWis
+            // 
+            this.FinalWis.AutoSize = true;
+            this.FinalWis.Location = new System.Drawing.Point(121, 114);
+            this.FinalWis.Name = "FinalWis";
+            this.FinalWis.Size = new System.Drawing.Size(47, 13);
+            this.FinalWis.TabIndex = 32;
+            this.FinalWis.Text = "FinalWis";
+            this.FinalWis.Visible = false;
+            // 
+            // FinalInt
+            // 
+            this.FinalInt.AutoSize = true;
+            this.FinalInt.Location = new System.Drawing.Point(121, 89);
+            this.FinalInt.Name = "FinalInt";
+            this.FinalInt.Size = new System.Drawing.Size(41, 13);
+            this.FinalInt.TabIndex = 31;
+            this.FinalInt.Text = "FinalInt";
+            this.FinalInt.Visible = false;
+            // 
+            // FinalCon
+            // 
+            this.FinalCon.AutoSize = true;
+            this.FinalCon.Location = new System.Drawing.Point(121, 62);
+            this.FinalCon.Name = "FinalCon";
+            this.FinalCon.Size = new System.Drawing.Size(48, 13);
+            this.FinalCon.TabIndex = 30;
+            this.FinalCon.Text = "FinalCon";
+            this.FinalCon.Visible = false;
+            // 
+            // FinalDex
+            // 
+            this.FinalDex.AutoSize = true;
+            this.FinalDex.Location = new System.Drawing.Point(121, 35);
+            this.FinalDex.Name = "FinalDex";
+            this.FinalDex.Size = new System.Drawing.Size(48, 13);
+            this.FinalDex.TabIndex = 29;
+            this.FinalDex.Text = "FinalDex";
+            this.FinalDex.Visible = false;
+            // 
+            // FinalStr
+            // 
+            this.FinalStr.AutoSize = true;
+            this.FinalStr.Location = new System.Drawing.Point(121, 11);
+            this.FinalStr.Name = "FinalStr";
+            this.FinalStr.Size = new System.Drawing.Size(42, 13);
+            this.FinalStr.TabIndex = 28;
+            this.FinalStr.Text = "FinalStr";
+            this.FinalStr.Visible = false;
+            // 
             // FinishButton
             // 
-            this.FinishButton.Location = new System.Drawing.Point(687, 9);
+            this.FinishButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.FinishButton.Location = new System.Drawing.Point(824, 12);
             this.FinishButton.Name = "FinishButton";
             this.FinishButton.Size = new System.Drawing.Size(75, 23);
             this.FinishButton.TabIndex = 25;
@@ -405,6 +466,7 @@
             this.RaceLabel.Size = new System.Drawing.Size(79, 13);
             this.RaceLabel.TabIndex = 26;
             this.RaceLabel.Text = "Choose a race:";
+            this.RaceLabel.Visible = false;
             // 
             // FinStatButton
             // 
@@ -417,76 +479,16 @@
             this.FinStatButton.Visible = false;
             this.FinStatButton.Click += new System.EventHandler(this.FinStatButton_Click);
             // 
-            // FinalStr
-            // 
-            this.FinalStr.AutoSize = true;
-            this.FinalStr.Location = new System.Drawing.Point(121, 11);
-            this.FinalStr.Name = "FinalStr";
-            this.FinalStr.Size = new System.Drawing.Size(42, 13);
-            this.FinalStr.TabIndex = 28;
-            this.FinalStr.Text = "FinalStr";
-            this.FinalStr.Visible = false;
-            // 
-            // FinalDex
-            // 
-            this.FinalDex.AutoSize = true;
-            this.FinalDex.Location = new System.Drawing.Point(121, 35);
-            this.FinalDex.Name = "FinalDex";
-            this.FinalDex.Size = new System.Drawing.Size(48, 13);
-            this.FinalDex.TabIndex = 29;
-            this.FinalDex.Text = "FinalDex";
-            this.FinalDex.Visible = false;
-            // 
-            // FinalCon
-            // 
-            this.FinalCon.AutoSize = true;
-            this.FinalCon.Location = new System.Drawing.Point(121, 62);
-            this.FinalCon.Name = "FinalCon";
-            this.FinalCon.Size = new System.Drawing.Size(48, 13);
-            this.FinalCon.TabIndex = 30;
-            this.FinalCon.Text = "FinalCon";
-            this.FinalCon.Visible = false;
-            // 
-            // FinalInt
-            // 
-            this.FinalInt.AutoSize = true;
-            this.FinalInt.Location = new System.Drawing.Point(121, 89);
-            this.FinalInt.Name = "FinalInt";
-            this.FinalInt.Size = new System.Drawing.Size(41, 13);
-            this.FinalInt.TabIndex = 31;
-            this.FinalInt.Text = "FinalInt";
-            this.FinalInt.Visible = false;
-            // 
-            // FinalWis
-            // 
-            this.FinalWis.AutoSize = true;
-            this.FinalWis.Location = new System.Drawing.Point(121, 114);
-            this.FinalWis.Name = "FinalWis";
-            this.FinalWis.Size = new System.Drawing.Size(47, 13);
-            this.FinalWis.TabIndex = 32;
-            this.FinalWis.Text = "FinalWis";
-            this.FinalWis.Visible = false;
-            // 
-            // FinalCha
-            // 
-            this.FinalCha.AutoSize = true;
-            this.FinalCha.Location = new System.Drawing.Point(121, 141);
-            this.FinalCha.Name = "FinalCha";
-            this.FinalCha.Size = new System.Drawing.Size(48, 13);
-            this.FinalCha.TabIndex = 33;
-            this.FinalCha.Text = "FinalCha";
-            this.FinalCha.Visible = false;
-            // 
             // RaceBox
             // 
             this.RaceBox.FormattingEnabled = true;
-            
-            this.RaceBox.Items.AddRange(new string[] { "null" });
-            
+            this.RaceBox.Items.AddRange(new object[] {
+            "null"});
             this.RaceBox.Location = new System.Drawing.Point(101, 248);
             this.RaceBox.Name = "RaceBox";
             this.RaceBox.Size = new System.Drawing.Size(120, 56);
             this.RaceBox.TabIndex = 28;
+            this.RaceBox.Visible = false;
             this.RaceBox.SelectedIndexChanged += new System.EventHandler(this.RaceBox_SelectedIndexChanged);
             // 
             // NewCharacterMenu
@@ -494,7 +496,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(917, 450);
             this.Controls.Add(this.RaceBox);
             this.Controls.Add(this.FinStatButton);
             this.Controls.Add(this.RaceLabel);
