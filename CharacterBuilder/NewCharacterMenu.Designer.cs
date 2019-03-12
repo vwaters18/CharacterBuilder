@@ -62,6 +62,8 @@
             this.RaceLabel = new System.Windows.Forms.Label();
             this.FinStatButton = new System.Windows.Forms.Button();
             this.RaceBox = new System.Windows.Forms.ListBox();
+            this.CharacterFeatures = new System.Windows.Forms.TreeView();
+            this.FeaturesListLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.StrNum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChaNum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.WisNum)).BeginInit();
@@ -450,7 +452,7 @@
             // FinishButton
             // 
             this.FinishButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.FinishButton.Location = new System.Drawing.Point(824, 12);
+            this.FinishButton.Location = new System.Drawing.Point(855, 12);
             this.FinishButton.Name = "FinishButton";
             this.FinishButton.Size = new System.Drawing.Size(75, 23);
             this.FinishButton.TabIndex = 25;
@@ -491,12 +493,33 @@
             this.RaceBox.Visible = false;
             this.RaceBox.SelectedIndexChanged += new System.EventHandler(this.RaceBox_SelectedIndexChanged);
             // 
+            // CharacterFeatures
+            // 
+            this.CharacterFeatures.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.CharacterFeatures.BackColor = System.Drawing.Color.Silver;
+            this.CharacterFeatures.Location = new System.Drawing.Point(559, 53);
+            this.CharacterFeatures.Name = "CharacterFeatures";
+            this.CharacterFeatures.Size = new System.Drawing.Size(371, 392);
+            this.CharacterFeatures.TabIndex = 29;
+            // 
+            // FeaturesListLabel
+            // 
+            this.FeaturesListLabel.AutoSize = true;
+            this.FeaturesListLabel.Location = new System.Drawing.Point(559, 34);
+            this.FeaturesListLabel.Name = "FeaturesListLabel";
+            this.FeaturesListLabel.Size = new System.Drawing.Size(97, 13);
+            this.FeaturesListLabel.TabIndex = 30;
+            this.FeaturesListLabel.Text = "Character Features";
+            // 
             // NewCharacterMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(917, 450);
+            this.ClientSize = new System.Drawing.Size(948, 474);
+            this.Controls.Add(this.FeaturesListLabel);
+            this.Controls.Add(this.CharacterFeatures);
             this.Controls.Add(this.RaceBox);
             this.Controls.Add(this.FinStatButton);
             this.Controls.Add(this.RaceLabel);
@@ -577,5 +600,7 @@
         private System.Windows.Forms.Label FinalDex;
         private System.Windows.Forms.Label FinalStr;
         private System.Windows.Forms.ListBox RaceBox;
+        private System.Windows.Forms.TreeView CharacterFeatures;
+        private System.Windows.Forms.Label FeaturesListLabel;
     }
 }

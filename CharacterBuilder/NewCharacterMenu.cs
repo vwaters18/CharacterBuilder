@@ -93,8 +93,9 @@ namespace CharacterBuilder
                 RaceBox.Items.Add(Race.SelectSingleNode("name").InnerText);
             }
 
-            
-            
+            CharacterFeatures.Nodes.Add("Race");
+            CharacterFeatures.Nodes.Add("Class");
+            CharacterFeatures.Nodes.Add("Background");
         }
 
         /**
@@ -273,9 +274,11 @@ namespace CharacterBuilder
         private void RaceBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             XmlNodeList stats;//Holds list of stats chagned by the race
+            XmlNodeList featureNames;//Holds list of racial feature names
+            XmlNodeList featureDescriptions;//Holds list of racial feature descriptions
 
             //If th user has previously selected a race and is now changing the selected race
-            if(selectedRace!=null)
+            if (selectedRace!=null)
             {
                 //Get the list of stats taht are affected
                 stats = selectedRace.SelectNodes("features/stats/stat");
@@ -313,6 +316,13 @@ namespace CharacterBuilder
                             break;
                     }
                 }
+
+                for(int i= CharacterFeatures.Nodes[0].GetNodeCount(false)-1; i>=0;i--)
+                {
+                    CharacterFeatures.Nodes[0].Nodes[i].Remove();
+                }
+                
+
             }
 
             //Store the new race in the XML node for the selected race
@@ -355,6 +365,21 @@ namespace CharacterBuilder
                 }
             }
 
+            featureNames = selectedRace.SelectNodes("features/feature/featureName");
+            foreach(XmlNode feature in featureNames)
+            {
+                CharacterFeatures.Nodes[0].Nodes.Add(feature.InnerText);
+                
+            }
+
+
+            featureDescriptions = selectedRace.SelectNodes("features/feature/desc");
+            int index = 0;
+            foreach (XmlNode feature in featureDescriptions)
+            {
+                CharacterFeatures.Nodes[0].Nodes[index].Nodes.Add(feature.InnerText);
+                index++;
+            }
         }
     }
 }

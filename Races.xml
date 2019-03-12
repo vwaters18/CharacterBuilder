@@ -40,12 +40,12 @@
         <stat><StatName>Str</StatName><bonus>1</bonus></stat>
       </stats>
       <feature>
-        <featureName>Darkvision</featureName>
-        <desc>You can see up to 60 ft in dim light as if it were bright, and darkness as if it were dim.</desc>
-      </feature>
-      <feature>
         <featureName>Dwarven Resilience</featureName>
         <desc>You have advantage on Saving Throws against poison, and you have Resistance against poison damage.</desc>
+      </feature>
+      <feature>
+        <featureName>Darkvision</featureName>
+        <desc>You can see up to 60 ft in dim light as if it were bright, and darkness as if it were dim.</desc>
       </feature>
     </features>
   </Race>
